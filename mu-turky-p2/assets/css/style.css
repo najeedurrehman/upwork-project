@@ -260,17 +260,17 @@ body {
 .sidebar {
   width: 8.38607594%;
   height: 100%;
-  height: 908px;
+  height: calc(100vh - 90px);
   background-color: pink;
-  /* position: fixed; */
+  position: fixed;
   border-radius: 0px 35px 0px 35px;
   padding-top: 31px;
   padding-bottom: 25px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* top: 70;
-  left: 24px; */
+  justify-content: space-between; */
+  top: 70;
+  left: 24px;
 }
 
 .sidebar__menu {
@@ -345,6 +345,8 @@ body {
   width: 90.3481%;
   border-radius: 14px;
   padding-right: 1.25%;
+  margin: 0px auto;
+  margin-right: 0px;
 }
 .main-content > .main-content__section {
   height: 100%;
@@ -519,16 +521,31 @@ body {
 .table {
   width: 97.3949%;
   margin: 0px auto;
+  position: relative;
+  
   transition: width 0.5s ease-in-out;
 }
 .table__header {
   display: flex;
+  width: 100%;
   align-items: center;
-}
-.table__header {
   background: #f8f8f8;
   padding: 23px 1.44% 23px 1.64133%;
   border-radius: 14px 14px 0px 0px;
+}
+.table__header-fixed {
+  z-index: 1;
+  right: 20px;
+  top: 0px;
+  position: fixed;
+  display: none;
+  align-items: center;
+  background: #f8f8f8;
+  width: calc(88.115% - 2px);
+  padding: 23px 2.9011% 23px 2.9011%;
+}
+.d-none{
+  display: none;
 }
 .table__header > div {
   font-size: 0.8125rem;
@@ -638,6 +655,7 @@ body {
   font-size: 0.75rem;
   top: -175%;
   left: -75%;
+  z-index: 9999;
   border-radius: 5px;
   box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.25);
 }
@@ -707,18 +725,31 @@ body {
 .table__pagination-next > img {
   margin-left: 8px;
 }
-.table__cell--status{
-  
+.table__cell--status {
   border-radius: 26px;
   min-height: 24px;
   text-align: center;
   padding: 4.5px 0px;
   overflow: hidden;
-  border: 1px solid #E0E4E8;
-  background-color: #F8F8F8;
+  border: 1px solid #e0e4e8;
+  background-color: #f8f8f8;
 }
-.table__status-text{
+.table__status-text {
   font-size: 0.75rem;
   font-weight: 500;
   color: #333333;
 }
+/* .header-fixed{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.mt-70{
+  margin-top: 70px;
+} */
+/* 
+.sticky{
+  top: 0px;
+  position: sticky;
+  z-index: 999
+} */
