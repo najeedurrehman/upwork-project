@@ -574,7 +574,7 @@ body {
 }
 .table__body {
   width: 100%;
-  transition: all 0.5 ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .table__body-customize {
   width: 97.3949% !important;
@@ -589,6 +589,23 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #efefef;
+  position: relative;
+}
+.placeholder-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(240, 240, 240, 0.93);
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.placeholder-div > p {
+  color: #717c86;
+  font-size: 0.8125rem;
 }
 .table__description-role {
   color: #546e7a;
@@ -607,4 +624,86 @@ body {
 }
 .table__cell--view {
   text-align: center;
+  position: relative;
+}
+.table__cell--view > img {
+  cursor: pointer;
+  position: relative;
+}
+.table__cell--view:hover::after {
+  position: absolute;
+  content: "Details";
+  padding: 8px 13px;
+  color: #000;
+  font-size: 0.75rem;
+  top: -175%;
+  left: -75%;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.25);
+}
+.table__footer {
+  padding: 30px 2.7827% 30px 2.9011%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table__footer-items-per-page,
+.table__footer-page-info {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #101010;
+}
+.table__footer-page-count,
+.table__footer-items-count {
+  border: 1px solid #d9d9d9;
+  border-radius: 120px;
+  padding: 7px 12px 7px 14px;
+  font-weight: 600;
+}
+.table__footer-page-count > img,
+.table__footer-items-count > img {
+  margin-left: 8px;
+}
+.table__pagination-page {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+  font-size: 0.75rem;
+  color: #333333;
+  font-weight: 500;
+  cursor: pointer;
+}
+.table__pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.table__pagination-page--current {
+  background-color: #111ae9;
+  border-color: #111ae9;
+  color: #fff;
+}
+.table__pagination-prev,
+.table__pagination-next {
+  border: 0px;
+  background-color: transparent;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #e3e3e3;
+  border: 1px solid #e3e3e3;
+  padding: 7px 14px 7px 12px;
+  border-radius: 120px;
+}
+.table__pagination-next {
+  color: #000;
+}
+.table__pagination-prev > img {
+  margin-right: 8px;
+}
+.table__pagination-next > img {
+  margin-left: 8px;
 }
