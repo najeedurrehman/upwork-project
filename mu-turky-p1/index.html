@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="styleheet"
+    />
+    <link type="text/css" href="./assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <a href="#" class="header__logo-link">
+          <img
+            src="./assets/icons/logo.svg"
+            alt="Logo"
+            class="header__logo-image"
+          />
+        </a>
+      </div>
+
+      <div class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">
+              <img src="./assets/icons/search.svg" />
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">
+              <img src="./assets/icons/email.svg" />
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">
+              <img src="./assets/icons/bell.svg" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__profile">
+          <span class="header__separator"></span>
+          <span class="header__profile-icon">
+            <img src="./assets/icons/profile.svg" />
+          </span>
+          <span class="header__profile-info">
+            <div class="header__profile-name">Dummy Name</div>
+            <div class="header__profile-role">Role</div>
+          </span>
+          <div class="header__dropdown-icon">
+            <img src="./assets/icons/arrow.svg" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <aside class="sidebar">
+        <ul class="sidebar__menu">
+          <li class="sidebar__menu-item sidebar__menu-item-active">
+            <a href="#" class="sidebar__menu-link">
+              <div class="sidebar__icon" id="homeicon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 11.2039C1 8.91549 1 7.77128 1.5192 6.82274C2.0384 5.87421 2.98695 5.28551 4.88403 4.10813L6.88403 2.86687C8.88939 1.62229 9.8921 1 11 1C12.1079 1 13.1106 1.62229 15.116 2.86687L17.116 4.10812C19.0131 5.28551 19.9616 5.87421 20.4808 6.82274C21 7.77128 21 8.91549 21 11.2039V12.725C21 16.6258 21 18.5763 19.8284 19.7881C18.6569 21 16.7712 21 13 21H9C5.22876 21 3.34315 21 2.17157 19.7881C1 18.5763 1 16.6258 1 12.725V11.2039Z"
+                    stroke="white"
+                    stroke-width="1.35"
+                  />
+                  <path
+                    d="M13.9985 16.9983H7.99854"
+                    stroke="white"
+                    stroke-width="1.35"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="sidebar__title">Dashboard</div>
+            </a>
+          </li>
+
+          <li class="sidebar__menu-item">
+            <a href="#" class="sidebar__menu-link">
+              <div class="sidebar__icon">
+                <svg
+                  width="18"
+                  height="23"
+                  viewBox="0 0 19 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.1121 18.4696C0.668982 17.9794 0.44729 17.3363 0.510651 16.693C0.574018 15.9579 1.30195 15.0392 2.15661 13.967C2.21998 13.8751 2.31492 13.7525 2.37829 13.6914V8.63742C2.37829 5.05376 5.16372 2.02144 8.7087 1.65389V0.765738C8.7087 0.336936 9.05688 0 9.5 0C9.94312 0 10.2913 0.336936 10.2913 0.765738V1.65389C11.8423 1.80708 13.2982 2.48094 14.4377 3.55286C15.8304 4.86982 16.6217 6.61581 16.6217 8.51479V13.7218C16.6851 13.8136 16.78 13.9055 16.8434 13.9974C17.698 15.0695 18.426 15.9882 18.4893 16.7234C18.5527 17.3667 18.331 18.0098 17.8879 18.4999C17.4448 18.99 16.8118 19.2656 16.1154 19.2656H2.82158C2.21991 19.2353 1.58692 18.9597 1.11203 18.4696H1.1121ZM16.7799 17.4282C16.9382 17.275 17.0015 17.0607 16.9697 16.8462C16.9064 16.4787 15.9568 15.3147 15.6404 14.9165C15.1972 14.3653 15.0707 14.2121 15.0707 13.9057V8.51496C15.0707 7.0448 14.4693 5.66652 13.3932 4.65569C12.3487 3.67544 10.9877 3.15479 9.56316 3.15479H9.37328C6.42976 3.24666 4.02403 5.72762 4.02403 8.66811V13.9364C4.02403 14.2428 3.89752 14.3957 3.45441 14.9472C3.13779 15.3146 2.18844 16.4786 2.12502 16.8461C2.09345 17.0606 2.18839 17.2749 2.3149 17.4282C2.4732 17.5813 2.66308 17.6732 2.91634 17.6732H16.1786C16.4 17.7038 16.6217 17.6119 16.7798 17.4282L16.7799 17.4282Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M8.04232 20.4231C8.26399 21.0357 8.86522 21.4339 9.52997 21.4339C10.1947 21.4339 10.7959 21.0356 11.0176 20.4231C11.1759 20.0249 11.6191 19.8106 12.0306 19.9638C12.4421 20.1169 12.6636 20.5458 12.5053 20.944C12.0622 22.1691 10.8593 22.9962 9.52994 22.9962C8.20055 22.9962 6.99771 22.1691 6.55459 20.944C6.39628 20.5458 6.61795 20.117 7.02928 19.9638C7.44082 19.8106 7.88394 20.0249 8.04226 20.4231H8.04232Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div class="sidebar__title">Notifications</div>
+            </a>
+          </li>
+
+          <li class="sidebar__menu-item">
+            <a href="#" class="sidebar__menu-link">
+              <div class="sidebar__icon" id="email-icon">
+                <svg
+                  width="20"
+                  height="14"
+                  viewBox="0 0 21 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.51209 0.899999L17.4879 0.9C19.2036 0.9 20.6 2.28864 20.6 3.99701L20.6 12.003C20.6 13.7112 19.2036 15.1 17.4879 15.1L3.51224 15.1C1.79642 15.1 0.399999 13.7114 0.399999 12.003L0.399999 3.99701C0.4 2.28871 1.7963 0.90012 3.51186 0.899999C3.51194 0.899999 3.51201 0.899999 3.51209 0.899999ZM1.54196 12.0028C1.54196 13.0826 2.42539 13.9622 3.51198 13.9622L17.4876 13.9622C18.5742 13.9622 19.4577 13.0827 19.4577 12.0028L19.4575 3.99682C19.4575 2.91698 18.5741 2.03739 17.4875 2.03739L3.51183 2.03738C2.42525 2.03738 1.54181 2.91694 1.54181 3.99682L1.54196 12.0028Z"
+                    fill="black"
+                    stroke="black"
+                    stroke-width="0.2"
+                  />
+                  <path
+                    d="M7.86048 7.17586L3.77924 4.37829C3.56499 4.23145 3.51109 3.93954 3.65868 3.72633C3.80656 3.51301 4.09996 3.45939 4.31395 3.60623L8.84594 6.71298C9.83572 7.39179 11.1662 7.39138 12.1558 6.71313L16.6878 3.60638C16.9022 3.45954 17.1955 3.51301 17.3431 3.72648C17.4907 3.93965 17.4368 4.23159 17.2225 4.37843L13.1417 7.176L17.5105 11.6836C17.6913 11.87 17.6857 12.1666 17.4985 12.3463C17.4068 12.4342 17.2891 12.4777 17.1713 12.4777C17.0478 12.4777 16.9246 12.4296 16.8322 12.3344L12.3393 7.69886C11.7689 8.00511 11.135 8.15837 10.501 8.15837C9.86707 8.15837 9.23324 8.0051 8.66274 7.69871L4.16985 12.3342C4.07748 12.4296 3.95412 12.4775 3.83077 12.4775C3.71314 12.4775 3.59522 12.4339 3.50358 12.3462C3.31649 12.1665 3.31091 11.8697 3.49154 11.6834L7.86048 7.17586Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div class="sidebar__title">Inbox</div>
+            </a>
+          </li>
+
+          <li class="sidebar__menu-item">
+            <a href="#" class="sidebar__menu-link">
+              <div class="sidebar__icon">
+                <svg
+                  width="18"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="1.65"
+                    y1="10.3141"
+                    x2="1.65"
+                    y2="18.8474"
+                    stroke="black"
+                    stroke-width="2.3"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="13.65"
+                    y1="6.15"
+                    x2="13.65"
+                    y2="18.85"
+                    stroke="black"
+                    stroke-width="2.3"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="19.65"
+                    y1="14.4859"
+                    x2="19.65"
+                    y2="18.8526"
+                    stroke="black"
+                    stroke-width="2.3"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="7.65"
+                    y1="1.15"
+                    x2="7.65"
+                    y2="18.85"
+                    stroke="black"
+                    stroke-width="2.3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="sidebar__title">Analytics</div>
+            </a>
+          </li>
+
+          <li class="sidebar__menu-item">
+            <a href="#" class="sidebar__menu-link">
+              <div class="sidebar__icon">
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 19 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.9348 14.1192L14.9213 14.1118L14.4037 13.8269C13.9272 13.5647 13.3324 13.5995 12.893 13.9146L12.8928 13.9147C12.5572 14.1531 12.1891 14.3571 11.7985 14.5206L11.7981 14.5208C11.2998 14.7245 10.9747 15.1967 10.9747 15.717V15.7176C10.9732 15.8389 10.9725 15.9808 10.9722 16.0926L10.9719 16.231L10.9718 16.2712L10.9718 16.2819L10.9718 16.2847V16.2854V16.2856V16.2856C10.9718 17.0645 10.3103 17.6928 9.50004 17.6928C8.68982 17.6928 8.02826 17.0645 8.02826 16.2856V15.7171C8.02765 15.1955 7.7018 14.7226 7.19704 14.5161L7.19691 14.5161C6.8081 14.3557 6.44004 14.1517 6.10086 13.9129L6.10046 13.9126C5.66712 13.6009 5.07303 13.5666 4.59697 13.8288L4.59665 13.829C4.48583 13.889 4.35634 13.9597 4.25453 14.0154L4.12841 14.0845L4.09181 14.1046L4.08203 14.11L4.07951 14.1113L4.07887 14.1117L4.07872 14.1118L4.07871 14.1118L4.07867 14.1118L4.07866 14.1118M14.9348 14.1192L2.62101 11.7241C1.95047 12.1017 1.72231 12.9263 2.11248 13.5713C2.50493 14.2201 3.37497 14.4426 4.05458 14.068L4.07866 14.1118M14.9348 14.1192L14.935 14.1192C15.6352 14.4958 16.5262 14.2654 16.9304 13.5972C17.3375 12.9245 17.0964 12.0655 16.3951 11.6758L16.3951 11.6757L15.8776 11.3887L15.8775 11.3886C15.4046 11.1286 15.1405 10.626 15.2019 10.1125L15.202 10.1122C15.225 9.9115 15.2372 9.70677 15.2372 9.49987C15.2372 9.29372 15.225 9.0894 15.2013 8.88932L15.2013 8.88929C15.1399 8.37376 15.404 7.87114 15.8768 7.6097L16.3915 7.32603C17.0949 6.93828 17.3382 6.07658 16.9305 5.40257C16.5259 4.73276 15.6308 4.50297 14.9303 4.88295L14.93 4.8831L14.9541 4.9269L14.93 4.8831L14.93 4.88311L14.9299 4.88313L14.9298 4.88322L14.9291 4.88358L14.9266 4.88499L14.9167 4.89044L14.8795 4.91086L14.7515 4.98111C14.6481 5.03776 14.5164 5.10966 14.4035 5.1707L14.4032 5.1709C13.9271 5.43316 13.333 5.3988 12.8997 5.08715L12.8993 5.08687C12.5601 4.84805 12.192 4.64403 11.8032 4.48368L11.8031 4.48363C11.2983 4.27718 10.9725 3.80421 10.9719 3.28267V2.71413C10.9719 1.9352 10.3103 1.30698 9.50009 1.30698C8.69347 1.30698 8.03343 1.9303 8.02832 2.70499V2.70532V2.70534V2.70538V2.70556V2.70627L8.02832 2.70907L8.02831 2.71995L8.02827 2.76065L8.02796 2.901C8.0276 3.01435 8.02689 3.15854 8.02546 3.28215V3.28273C8.02546 3.80098 7.70279 4.27179 7.20178 4.4794M14.9348 14.1192L7.20178 4.4794M4.07866 14.1118C3.37647 14.4988 2.47655 14.2698 2.0697 13.5972C1.66204 12.9233 1.90506 12.0619 2.60814 11.674M4.07866 14.1118L2.60814 11.674M2.60814 11.674L2.60806 11.6737L3.12339 11.39L2.60814 11.674ZM7.20178 4.4794L7.20164 4.47908C6.81099 4.64267 6.44294 4.84667 6.10727 5.08499L6.10708 5.08513C5.66774 5.40024 5.07296 5.43503 4.59638 5.17284C4.59637 5.17284 4.59637 5.17283 4.59637 5.17283L4.07879 4.88794L7.20178 4.4794ZM15.1523 10.1065C15.1751 9.90764 15.1872 9.70481 15.1872 9.49987C15.1872 9.29568 15.1751 9.09333 15.1517 8.89521L15.1523 10.1065ZM15.1523 10.1065C15.0883 10.6412 15.3635 11.163 15.8534 11.4324L16.3708 11.7195C17.0484 12.096 17.2794 12.9239 16.8876 13.5713L15.1523 10.1065ZM8.07832 2.70532C8.08323 1.96025 8.71877 1.35698 9.50009 1.35698C10.2849 1.35698 10.9219 1.96498 10.9219 2.71413V3.28273C10.9225 3.82559 11.2616 4.31618 11.7842 4.52991L8.07832 2.70532ZM8.07832 2.70532C8.07832 2.70532 8.07832 3.03508 8.07546 3.28273C8.07546 3.82181 7.74017 4.30983 7.22222 4.52505L8.07832 2.70532ZM3.79883 10.1104L3.79883 10.1104C3.77511 9.91034 3.76294 9.70602 3.76294 9.49987C3.76294 9.29297 3.77511 9.08824 3.79818 8.88752L3.7982 8.88729C3.85962 8.37378 3.59552 7.87116 3.12264 7.6103L3.1226 7.61028L2.59866 7.32067L2.59826 7.32045C1.90165 6.92715 1.66498 6.07175 2.06977 5.40253L2.11255 5.42841L2.06977 5.40253C2.4766 4.72999 3.37653 4.50092 4.07877 4.88793L3.79883 10.1104ZM3.79883 10.1104C3.86025 10.626 3.59616 11.1285 3.12348 11.39L3.79883 10.1104ZM6.70649 2.69698H6.70648C6.71632 1.23633 7.96206 0.05 9.50004 0.05C11.0443 0.05 12.2936 1.24574 12.2936 2.71429L12.2936 2.71454L12.2965 3.28392L12.2966 3.3172L12.3274 3.32989C12.8109 3.52927 13.2661 3.78117 13.6875 4.07837L13.7129 4.09625L13.7402 4.08146L14.2748 3.7917L14.2748 3.79168C15.6087 3.06704 17.3092 3.50763 18.0762 4.77589L18.1189 4.75002L18.0762 4.77589C18.8456 6.04807 18.3894 7.67798 17.054 8.41398L17.0782 8.45777L17.054 8.41399L17.054 8.41401L17.0538 8.4141L17.0532 8.41445L17.0507 8.41582L17.0411 8.42113L17.005 8.44102L16.8805 8.5097L16.54 8.69755L16.5106 8.71383L16.5146 8.74726C16.5442 8.99438 16.559 9.24551 16.559 9.5C16.559 9.75389 16.5442 10.0044 16.5152 10.2521L16.5113 10.2854L16.5406 10.3017L17.054 10.586L17.0541 10.586C18.3895 11.322 18.8456 12.952 18.0762 14.2241L18.119 14.25L18.0762 14.2241C17.3065 15.4976 15.5957 15.9363 14.2591 15.1998L14.2591 15.1995L13.7395 14.9172L13.7121 14.9023L13.6867 14.9203C13.2682 15.2167 12.8137 15.4694 12.3278 15.6723L12.2973 15.6851L12.2971 15.7182L12.2936 16.2854V16.2857C12.2936 17.7543 11.0444 18.95 9.50007 18.95C7.95578 18.95 6.70651 17.7543 6.70651 16.2857L6.70651 16.2855L6.70365 15.7161L6.70349 15.6828L6.67272 15.6701C6.4327 15.5711 6.09234 15.3839 5.81016 15.2201C5.66948 15.1385 5.54395 15.0631 5.45359 15.0081C5.40842 14.9807 5.37205 14.9583 5.34699 14.9428L5.3182 14.9249L5.31076 14.9203L5.30888 14.9191L5.30841 14.9188L5.3083 14.9187L5.30827 14.9187L5.28172 14.9611L5.30826 14.9187L5.28345 14.9032L5.25775 14.9172L4.74091 15.1996L4.74099 15.1999C3.40437 15.9363 1.69369 15.4976 0.923971 14.2241L0.923963 14.2241C0.154561 12.9519 0.610687 11.322 1.9461 10.586L1.9461 10.586L1.92196 10.5422L1.94611 10.586L1.94612 10.586L1.94616 10.586L1.94632 10.5859L1.94695 10.5855L1.94943 10.5842L1.95906 10.5788L1.99513 10.559L2.11966 10.4903L2.46008 10.3024L2.48956 10.2862L2.48556 10.2527C2.45597 10.0056 2.44116 9.75447 2.44116 9.49998C2.44116 9.24609 2.45596 8.99554 2.48494 8.74784L2.48883 8.71456L2.45952 8.69831L1.93077 8.40515C1.93077 8.40515 1.93076 8.40514 1.93075 8.40514C0.607241 7.66527 0.157207 6.04264 0.923926 4.77585L0.923942 4.77582C1.69373 3.50222 3.40468 3.06358 4.74135 3.80028L4.7416 3.80041L5.26063 4.08274L5.288 4.09763L5.31342 4.07962C5.73191 3.78322 6.18645 3.53054 6.67227 3.32763L6.7028 3.31488L6.703 3.2818L6.70649 2.69698ZM5.28471 9.49985C5.28471 7.28294 7.17175 5.47842 9.50005 5.47842C11.8283 5.47842 13.7154 7.28294 13.7154 9.49985C13.7154 11.7168 11.8283 13.5213 9.50005 13.5213C7.17175 13.5213 5.28471 11.7168 5.28471 9.49985ZM12.1092 9.49985C12.1092 8.12173 10.938 7.00699 9.50005 7.00699C8.0621 7.00699 6.89085 8.12173 6.89085 9.49985C6.89085 10.878 8.0621 11.9927 9.50005 11.9927C10.938 11.9927 12.1092 10.878 12.1092 9.49985Z"
+                    fill="black"
+                    stroke="#F5F5F5"
+                    stroke-width="0.1"
+                  />
+                </svg>
+              </div>
+              <div class="sidebar__title">Settings</div>
+            </a>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="sidebar__menu-item">
+            <a href="#" class="sidebar__menu-link">
+              <div class="sidebar__icon">
+                <svg
+                  width="18"
+                  height="16"
+                  viewBox="0 0 18 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.8113 7.56477L14.597 4.48789C14.3454 4.24708 13.9391 4.24708 13.688 4.48789C13.4365 4.7287 13.4365 5.11761 13.688 5.35799L15.805 7.38445H6.42841C6.07281 7.38445 5.78537 7.6596 5.78537 8C5.78537 8.3404 6.07281 8.61555 6.42841 8.61555H15.805L13.688 10.642C13.4365 10.8828 13.4365 11.2717 13.688 11.5121C13.8136 11.6323 13.9781 11.6924 14.1427 11.6924C14.3073 11.6924 14.4719 11.6323 14.5974 11.5121L17.8117 8.43522C18.0628 8.19442 18.0628 7.80551 17.8113 7.5647L17.8113 7.56477ZM11.5711 10.4613C11.2155 10.4613 10.928 10.7365 10.928 11.0769V12.9231C10.928 13.9409 10.0626 14.7694 8.99933 14.7694H3.21382C2.15061 14.7694 1.28512 13.9409 1.28512 12.9231V3.07688C1.28512 2.05913 2.15058 1.23064 3.21382 1.23064H8.99933C10.0625 1.23064 10.928 2.0591 10.928 3.07688V4.92312C10.928 5.26352 11.2155 5.53867 11.5711 5.53867C11.9267 5.53867 12.2141 5.26352 12.2141 4.92312V3.07688C12.2141 1.38042 10.772 0 8.99981 0H3.2143C1.44207 0 0 1.38042 0 3.07688V12.9231C0 14.6196 1.44207 16 3.2143 16H8.99981C10.772 16 12.2141 14.6196 12.2141 12.9231V11.0769C12.2141 10.7365 11.9267 10.4613 11.5711 10.4613Z"
+                    fill="#111AE9"
+                  />
+                </svg>
+              </div>
+              <div class="sidebar__title purple-text">Log out</div>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="content-section content-section--primary">
+          <div class="section-container">
+            <div
+              class="section-container__text section-container__text--primary"
+            >
+              <p class="submission-status mb-8">
+                You have received
+                <span class="submission-status__count">350</span> submissions
+                <span class="submission-status__time">today</span>, so far!
+              </p>
+
+              <p class="submission-status">
+                Out of these,
+                <span class="submission-status__count">200</span> were approved
+                <span class="submission-status__count">150</span> were rejected.
+              </p>
+            </div>
+            <div class="section-container__text--secondary">
+              <div class="content-block">
+                <div class="content-block__item text-summary">Lorem ipsum</div>
+              </div>
+
+              <div class="data-list">
+                <div class="data-list__item">
+                  <span class="data-list__label">Lorem ipsum dolor sit</span>
+                  <span class="data-list__value">320</span>
+                </div>
+
+                <div class="data-list__item">
+                  <span class="data-list__label"
+                    >Lorem ipsum dolor sit amet</span
+                  >
+                  <span class="data-list__value">0</span>
+                </div>
+
+                <div class="data-list__item">
+                  <span class="data-list__label"
+                    >voluptate velit esse cillum dolore eu</span
+                  >
+                  <span class="data-list__value">2526</span>
+                </div>
+
+                <div class="data-list__item">
+                  <span class="data-list__label">occaecat cupidatat non</span>
+                  <span class="data-list__value">6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+          <div class="section-container border-container special-container">
+            <div class="content-block">
+              <div class="content-block__item text-summary">Lorem ipsum</div>
+              <div class="content-block__item today-summary">
+                <span class="today-summary__text"> Today </span>
+                <svg
+                  class="today-summary__icon"
+                  width="7"
+                  height="13"
+                  viewBox="0 0 7 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.86166 4.84844C6.76943 4.94948 6.66024 5 6.53407 5C6.40815 5 6.29908 4.94948 6.20685 4.84844L3.50461 1.88799L0.793149 4.85855C0.707071 4.95285 0.599473 5 0.470356 5C0.341238 5 0.230567 4.94948 0.13834 4.84844C0.0461133 4.7474 0 4.62777 0 4.48955C0 4.3516 0.0461133 4.2321 0.13834 4.13106L3.24638 0.736143C3.28327 0.695727 3.32323 0.667032 3.36627 0.650057C3.40931 0.633352 3.45542 0.625 3.50461 0.625C3.5538 0.625 3.59991 0.633352 3.64295 0.650057C3.68599 0.667032 3.72596 0.695727 3.76285 0.736143L6.87088 4.14117C6.95696 4.23547 7 4.3516 7 4.48955C7 4.62777 6.95389 4.7474 6.86166 4.84844Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M0.13834 8.15156C0.230567 8.05052 0.339763 8 0.465929 8C0.591849 8 0.700922 8.05052 0.793149 8.15156L3.49539 11.112L6.20685 8.14145C6.29293 8.04715 6.40053 8 6.52964 8C6.65876 8 6.76943 8.05052 6.86166 8.15156C6.95389 8.2526 7 8.37223 7 8.51045C7 8.6484 6.95389 8.7679 6.86166 8.86894L3.75362 12.2639C3.71673 12.3043 3.67677 12.333 3.63373 12.3499C3.59069 12.3666 3.54458 12.375 3.49539 12.375C3.4462 12.375 3.40009 12.3666 3.35705 12.3499C3.31401 12.333 3.27404 12.3043 3.23715 12.2639L0.129117 8.85883C0.0430388 8.76453 0 8.6484 0 8.51045C0 8.37223 0.046113 8.2526 0.13834 8.15156Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="number-display">2,560</div>
+
+            <div class="stat-card">
+              <div class="stat-card__details">
+                <img
+                  class="stat-card__icon"
+                  src="./assets/icons/arrow-green.svg"
+                  alt="Arrow Icon"
+                />
+                <span class="stat-card__change stat-card__change--positive">
+                  &nbsp;+15%</span
+                >
+                <span class="stat-card__label">&nbsp;Compared to</span>
+                <span
+                  class="stat-card__reference stat-card__reference--highlight"
+                >
+                  &nbsp;yesterday</span
+                >
+                <span
+                  class="stat-card__reference stat-card__reference--secondary"
+                >
+                  &nbsp;(2,150)</span
+                >
+              </div>
+            </div>
+
+            <div class="stat-card stat-card-2">
+              <div class="stat-card__header">
+                <span class="stat-card__title">occaecat cupidatat non</span>
+                <span class="stat-card__value">2,560</span>
+              </div>
+              <div class="stat-card__details">
+                <img
+                  class="stat-card__icon"
+                  src="./assets/icons/arrow-red.svg"
+                  alt="Arrow Icon"
+                />
+                <span class="stat-card__change stat-card__change--negative">
+                  &nbsp;-15%</span
+                >
+                <span class="stat-card__label">&nbsp;Compared to</span>
+                <span
+                  class="stat-card__reference stat-card__reference--highlight"
+                  >&nbsp;yesterday</span
+                >
+                <span
+                  class="stat-card__reference stat-card__reference--secondary"
+                  >&nbsp;(2,150)</span
+                >
+              </div>
+            </div>
+
+            <div class="stat-card stat-card-3">
+              <div class="stat-card__header">
+                <span class="stat-card__title">commodo consequat</span>
+                <span class="stat-card__value">2,560</span>
+              </div>
+              <div class="stat-card__details">
+                <span class="stat-card__label">No change compared to</span>
+                <span
+                  class="stat-card__reference stat-card__reference--highlight"
+                  >&nbsp;yesterday</span
+                >
+                <span
+                  class="stat-card__reference stat-card__reference--secondary"
+                  >&nbsp;(2,150)</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section content-section--secondary">
+          <div class="stats-table active-state-table">
+            <div class="content-block table-content-block ">
+              <div class="content-block__item text-summary">
+                <span>Lorem ipsum dolor sit amet:</span>
+                <span class="count">35</span>
+              </div>
+            </div>
+            <div class="stat-table-container">
+              <div class="stats-table-header">
+                <div class="column-1">SUBID</div>
+                <div class="column-2">Started By</div>
+                <div class="column-3">Message</div>
+                <div class="column-4">Created On</div>
+                <div class="column-5">View</div>
+              </div>
+              <div class="stats-table-body" id="data-body">
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+                <div class="data-row">
+                  <div class="data-row__id column-1">23037020</div>
+                  <div class="data-row__details column-2">
+                    <div class="data-row__sender">Sender Name</div>
+                    <div class="data-row__role">Role 15</div>
+                  </div>
+                  <div class="data-row__message column-3">
+                    <p>
+                      Hi there, how are you doing? I was trying to reset my
+                      password but it kept showing me an error message and I am
+                      not su...
+                    </p>
+                  </div>
+                  <div class="data-row__timestamp column-4">
+                    Jan 16, 2023 at 07:53 UTC
+                  </div>
+                  <div class="data-row__actions column-5">
+                    <img
+                      src="./assets/icons/carbon_view.svg"
+                      alt="View Details"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="show-all">
+            <span>Show All</span>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- End -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
