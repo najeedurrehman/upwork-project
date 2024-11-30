@@ -707,3 +707,18 @@ body {
 .table__pagination-next > img {
   margin-left: 8px;
 }
+.table__cell--status{
+  
+  border-radius: 26px;
+  min-height: 24px;
+  text-align: center;
+  padding: 4.5px 0px;
+  overflow: hidden;
+  border: 1px solid #E0E4E8;
+  background-color: #F8F8F8;
+}
+.table__status-text{
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #333333;
+}
