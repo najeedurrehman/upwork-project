@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="./assets/css/animate.css" rel="styleheet" />
+    <style>
+        #input{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: relative;
+        }
+        #input::before{
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            content: "sd ";
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+
+
+    <div  id="input"></div>
+</body>
+
+</html>
