@@ -69,9 +69,7 @@
 
         <main class="main-content">
           <section class="main-content__section">
-            <div
-              class="toolbar mb-15 d-flex animate__animated animate__fadeInRight"
-            >
+            <div class="toolbar mb-15 d-flex animate__animated animate__fadeIn">
               <div class="toolbar__column toolbar__column--primary">
                 <div class="toolbar__details">
                   <div class="toolbar__text">Lorem ipsum</div>
@@ -151,9 +149,7 @@
               </div>
             </div>
             <div class="content-container">
-              <div
-                class="search-bar d-flex animate__animated animate__fadeInLeft"
-              >
+              <div class="search-bar d-flex animate__animated animate__fadeIn">
                 <div class="search-bar__info">
                   Showing submissions for
                   <span class="search-bar__info--time">All time</span>
@@ -164,6 +160,7 @@
                     type="text"
                     class="search-bar__input-field"
                     placeholder="Search by email address, submitter name, ID, etc..."
+                    onkeyup="searchFieldChangeHandler();"
                   />
                 </div>
 
@@ -233,53 +230,6 @@
                     View
                   </div>
                 </div>
-                
-                <div class="table__header-fixed d-none">
-                  <div class="table__header-cell table__header-cell--id col-1">
-                    ID
-                  </div>
-                  <div
-                    class="table__header-cell table__header-cell--description col-2"
-                  >
-                    Lorem ipsum
-                  </div>
-                  <div
-                    class="table__header-cell table__header-cell--video col-3"
-                  >
-                    Video
-                  </div>
-                  <div
-                    class="table__header-cell table__header-cell--title col-4"
-                  >
-                    Title
-                  </div>
-                  <div
-                    class="table__header-cell table__header-cell--name col-5"
-                  >
-                    Name
-                  </div>
-                  <div
-                    class="table__header-cell table__header-cell--email col-6"
-                  >
-                    Email Address
-                  </div>
-                  <div
-                    class="table__header-cell table__header-cell--date col-7"
-                  >
-                    Submission Date
-                  </div>
-                  <div
-                    class="table__header-cell table__header-cell--status col-8"
-                  >
-                    Status
-                  </div>
-                  <div
-                    class="table__header-cell table__header-cell--view col-9"
-                  >
-                    View
-                  </div>
-                </div>
-
                 <div class="table__body">
                   <div class="table__row">
                     <div class="table__cell table__cell--id col-1">
