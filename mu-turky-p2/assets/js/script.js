@@ -12,10 +12,21 @@ const mainContainer = document.querySelector(".main-content");
 const searchInputField = document.querySelector(".search-bar__input-field");
 
 var scroll = 0;
+let debounceTimeout;
+
 mainContainer.addEventListener("scroll", (event) => {
-  scroll = Math.round(mainContainer.scrollTop);
-  const searchCharacterLength = searchInputField.value.trim().length;
-  adjustStructure(scroll, searchCharacterLength);
+  const newScroll = Math.round(mainContainer.scrollTop);
+
+  if (newScroll !== scroll) {
+    scroll = newScroll;
+    console.log(scroll);
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+      console.log(`Called`);
+      const searchCharacterLength = searchInputField.value.trim().length;
+      adjustStructure(scroll, searchCharacterLength);
+    }, 50);
+  }
 });
 
 function searchFieldChangeHandler() {
@@ -24,14 +35,18 @@ function searchFieldChangeHandler() {
 }
 
 const adjustStructure = (scroll, searchCharacterLength) => {
-  if (!searchCharacterLength && tableHeader.classList.contains('table__header_no-radius')) {
+  if (
+    !searchCharacterLength &&
+    tableHeader.classList.contains("table__header_no-radius")
+  ) {
     tableHeader.classList.remove(
       "table__header_no-radius",
       "table__header--top-60"
     );
   }
 
-  if (scroll > 15) {
+  if (scroll >= 5) {
+  
     toolbar.classList.remove("animate__fadeIn");
     toolbar.classList.add("animate__fadeOut");
 
@@ -85,3 +100,12 @@ const adjustStructure = (scroll, searchCharacterLength) => {
     }, 100);
   }
 };
+
+
+const scrollme = document.querySelector("#scrollme");
+
+scrollme.addEventListener("change", () => {
+  scroll = scrollme.value;
+  const searchCharacterLength = searchInputField.value.trim().length;
+  adjustStructure(scroll, searchCharacterLength);
+});
