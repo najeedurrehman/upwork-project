@@ -10,18 +10,17 @@ const contentContainer = document.querySelector(".content-container");
 const mainContainer = document.querySelector(".main-content");
 
 const searchInputField = document.querySelector(".search-bar__input-field");
+const topContainer = document.querySelector(".content-container");
 
 var scroll = 0;
 let debounceTimeout;
 
 mainContainer.addEventListener("scroll", (event) => {
   const newScroll = Math.round(mainContainer.scrollTop);
-
+  console.log(newScroll);
   if (newScroll !== scroll) {
-    console.log(`OLD SCROLL = ${scroll} && NEW SCROLL ${newScroll}`);
-    scroll = Number(newScroll) + 1;
+    scroll = Number(newScroll);
     clearTimeout(debounceTimeout);
-    console.log(`UPDATE SCROLL ${scroll}`);
     debounceTimeout = setTimeout(() => {
       const searchCharacterLength = searchInputField.value.trim().length;
       adjustStructure(scroll, searchCharacterLength);
@@ -35,6 +34,7 @@ function searchFieldChangeHandler() {
 }
 
 const adjustStructure = (scroll, searchCharacterLength) => {
+
   if (
     !searchCharacterLength &&
     tableHeader.classList.contains("table__header_no-radius")
@@ -43,69 +43,67 @@ const adjustStructure = (scroll, searchCharacterLength) => {
       "table__header_no-radius",
       "table__header--top-60"
     );
+    searchbar.classList.remove("bg-white", "search-bar-sticky");
   }
 
-  if (scroll >= 5) {
-    console.log(`Animation Applied at ${scroll} value`);
+
+  if (scroll > 5) {
+    /* Remove Table Header */
     toolbar.classList.remove("animate__fadeIn");
     toolbar.classList.add("animate__fadeOut");
+    /* Container */
+    topContainer.classList.add("top-0");
+
+    /* Adjust Table Padding Top */
+    table.classList.add("w-full", "table-pt-0");
 
     if (!searchCharacterLength) {
+      /* Hide Searchbar */
       searchbar.classList.remove("animate__fadeIn");
       searchbar.classList.add("animate__fadeOut");
-
-      tableHeader.classList.add("make-header-white", "plr-header");
+      /* Table Header */
+      tableHeader.classList.add("make-header-white", "header-padding-lr");
     } else {
-      searchbar.classList.add("bg-white");
+      searchbar.classList.add("bg-white", "search-bar-sticky");
       tableHeader.classList.add(
         "table__header_no-radius",
-        "plr-header",
+        "header-padding-lr",
         "table__header--top-60"
       );
     }
-    table.classList.add("w-full");
+
+    /* Table Body */
     tableBody.classList.add("table__body-customize");
-
-    setTimeout(() => {
-      toolbar.classList.remove("d-flex");
-
-      if (!searchCharacterLength) {
-        searchbar.classList.remove("d-flex");
-      }
-    }, 100);
   } else {
-    console.log(`Animation Removed at ${scroll} value`);
+    /* Add Table Header */
     toolbar.classList.remove("animate__fadeOut");
     toolbar.classList.add("animate__fadeIn");
 
+    /* Container */
+    topContainer.classList.remove("top-0");
+
+    /* Show Searchbar */
+    searchbar.classList.remove("animate__fadeOut");
+    searchbar.classList.add("animate__fadeIn");
+
+    /* Adjust Table Padding Top */
+    table.classList.remove("w-full", "table-pt-0");
     if (!searchCharacterLength) {
+      /* Hide Searchbar */
       searchbar.classList.remove("animate__fadeOut");
       searchbar.classList.add("animate__fadeIn");
-      tableHeader.classList.remove("make-header-white", "plr-header");
+      /* Table Header */
+      tableHeader.classList.remove("make-header-white", "header-padding-lr");
     } else {
-      searchbar.classList.remove("bg-white");
+      searchbar.classList.remove("bg-white", "search-bar-sticky");
       tableHeader.classList.remove(
         "table__header_no-radius",
-        "plr-header",
+        "header-padding-lr",
         "table__header--top-60"
       );
     }
-    table.classList.remove("w-full");
-    tableBody.classList.remove("table__body-customize");
 
-    setTimeout(() => {
-      toolbar.classList.add("d-flex");
-      if (!searchCharacterLength) {
-        searchbar.classList.add("d-flex");
-      }
-    }, 100);
+    /* Table Body */
+    tableBody.classList.remove("table__body-customize");
   }
 };
-
-const scrollme = document.querySelector("#scrollme");
-
-scrollme.addEventListener("change", () => {
-  scroll = scrollme.value;
-  const searchCharacterLength = searchInputField.value.trim().length;
-  adjustStructure(scroll, searchCharacterLength);
-});
