@@ -18,14 +18,14 @@ mainContainer.addEventListener("scroll", (event) => {
   const newScroll = Math.round(mainContainer.scrollTop);
 
   if (newScroll !== scroll) {
-    scroll = newScroll;
-    console.log(scroll);
+    console.log(`OLD SCROLL = ${scroll} && NEW SCROLL ${newScroll}`);
+    scroll = Number(newScroll) + 1;
     clearTimeout(debounceTimeout);
+    console.log(`UPDATE SCROLL ${scroll}`);
     debounceTimeout = setTimeout(() => {
-      console.log(`Called`);
       const searchCharacterLength = searchInputField.value.trim().length;
       adjustStructure(scroll, searchCharacterLength);
-    }, 50);
+    }, 75);
   }
 });
 
@@ -46,7 +46,7 @@ const adjustStructure = (scroll, searchCharacterLength) => {
   }
 
   if (scroll >= 5) {
-  
+    console.log(`Animation Applied at ${scroll} value`);
     toolbar.classList.remove("animate__fadeIn");
     toolbar.classList.add("animate__fadeOut");
 
@@ -74,6 +74,7 @@ const adjustStructure = (scroll, searchCharacterLength) => {
       }
     }, 100);
   } else {
+    console.log(`Animation Removed at ${scroll} value`);
     toolbar.classList.remove("animate__fadeOut");
     toolbar.classList.add("animate__fadeIn");
 
@@ -100,7 +101,6 @@ const adjustStructure = (scroll, searchCharacterLength) => {
     }, 100);
   }
 };
-
 
 const scrollme = document.querySelector("#scrollme");
 
