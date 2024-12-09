@@ -486,7 +486,7 @@ body {
   height: auto;
   position: absolute;
   top: 111px;
-  transition: top 0.5s linear;
+  transition: top 0.35s linear;
 }
 .search-bar {
   padding: 10px 1.42095%;
@@ -589,7 +589,7 @@ body {
   width: 97.3949%;
   margin: 0px auto;
   padding-top: 61px;
-  transition: all 0.5s linear;
+  transition: all 0.35s linear;
 }
 .table-pt-0 {
   padding-top: 0px;
@@ -677,7 +677,7 @@ body {
 }
 .table__body {
   width: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .table__body-customize {
   width: 97.3949% !important;

@@ -24,7 +24,7 @@ mainContainer.addEventListener("scroll", (event) => {
     debounceTimeout = setTimeout(() => {
       const searchCharacterLength = searchInputField.value.trim().length;
       adjustStructure(scroll, searchCharacterLength);
-    }, 75);
+    }, 50);
   }
 });
 
@@ -34,7 +34,6 @@ function searchFieldChangeHandler() {
 }
 
 const adjustStructure = (scroll, searchCharacterLength) => {
-
   if (
     !searchCharacterLength &&
     tableHeader.classList.contains("table__header_no-radius")
@@ -45,7 +44,6 @@ const adjustStructure = (scroll, searchCharacterLength) => {
     );
     searchbar.classList.remove("bg-white", "search-bar-sticky");
   }
-
 
   if (scroll > 5) {
     /* Remove Table Header */
